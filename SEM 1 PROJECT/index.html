@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Editor</title>
+    <link rel="icon" href="img/download.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montaga&family=Nosifer&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">  </head>
+
+  <body style="background-image: url('img/photo-1519124080359-bfc4bb96f9aa.avif'); ">
+    <div class="navbar">
+      <a href="#about-us">About us</a>
+      <a href="#editor_panel">Editor Panel</a>
+      <a href="#flash">Features</a>
+      <a href="#contact-us">Learn</a>
+    </div>
+  <div class="content-container">
+      <div class="about_us" id="about-us">
+          <h2 style="padding:100px 30px;font-size:100px; font-style: italic;text-align: center;font-family: Rubik Doodle Shadow;"> Simple Photo Editor</h2>
+          <h1 style="font-family: montaga;text-align: center;margin-bottom:20px;">WHO ARE WE?</h1>
+          <div class="abt-us-content">
+          <p style="font-weight:200px;font-size: 25px; padding-bottom: 30px;">Welcome to our Simple Photo Editor app! Our goal is to provide an easy-to-use tool for editing and enhancing your photos.</p>
+          <ol type="I" class="features-list" style="font-size: 22px;padding-bottom: 30px;">
+            <li class="hidden">Adjust brightness, saturation, and contrast</li>
+            <li class="hidden">Apply various filters and effects</li>
+            <li class="hidden">Rotate and crop images</li>
+            <li class="hidden">Add text and stickers to your photos</li>
+            <li class="hidden">Make a collage of photo</li>
+            <li class="hidden">Share Image</li>
+          </ol>
+          <p style="font-size: 20px; font-style: oblique;">Our team of passionate developers and designers are dedicated to creating an intuitive and powerful photo editing experience for our users.</p>
+          <p style="font-size: 20px; font-style: oblique;">Whether you're a professional photographer or just love editing your photos for social media, our Simple Photo Editor app aims to cater to your editing needs.</p>
+        </div>
+      </div>
+
+      <h1 class="what" id="flash">WHAT WE CAN DO FOR YOU?</h1>
+      <div class="flash-cards-container">
+        <div class="flash-cards"  >
+          <div class="flash-card" >
+            <h3>Add filters & effects to create your style.</h3>
+            <p> Choose from a range of stunning, adjustable filters for a style that sets your photo apart. Try the trendiest looks, add shadows, or blur the background to instantly add depth to your image.
+
+            </p>
+          </div>
+          <div class="flash-card">
+            <h3>Take control of your photos</h3>
+            <p>Perfectly adjust warmth, brightness, and saturation using simple adjustment sliders. Need to make precise edits? Edit the whole image, foreground, or background separately. Crop to standard ratios or use Smart Crop for the ideal photo composition</p>
+          </div>
+          <div class="flash-card">
+            <h3>Upload instantly.</h3>
+            <p>Drag and drop your image to the editor with ease and start editing right away. JPEG/JPG, PNG, WEBP, HEIC, SVG, and PSD (Photoshop) formats are supported.</p>
+          </div>
+          <div class="flash-card">
+            <h3>Polish your pictures. </h3>
+            <p>Rotate your images with precision and crop them to any aspect ratio.</p>
+          </div>
+          <div class="flash-card">
+            
+            <h3>Save to your local storage</h3>
+            <p>Easily allows you to save the photos in your own mobile or computer within milliseconds.</p>
+          </div>
+        </div>
+      </div>
+
+    <div class="main-content" id="editor_panel">
+      <div style="display: block">
+        <div class="container disable">
+          <h2 class="logo">Simple Photo Editor</h2>
+          <div class="wrapper">
+            <div class="editor-panel" id="editor_panel">
+              <div class="filter">
+                <label class="title">Filters</label>
+                  <div class="options">
+                    <button id="brightness" class="active">Brightness</button>
+                    <button id="saturation" class="active">Saturation</button>
+                    <button id="inversion" class="active">Inversion</button>
+                    <button id="grayscale" class="active">Grayscale</button>
+                  </div>
+                <div class="slider">
+                  <div class="filter-info">
+                    <p class="name">Brightness</p>
+                    <p class="value">100%</p>
+                  </div>
+                  <input type="range" value="100" min="0" max="200" />
+                </div>
+              </div>
+              <div class="rotate">
+                <label for="" class="title">Editing tools</label>
+                <div class="options">
+                  <button id="left">
+                    <i class="fa-solid fa-rotate-left"></i>
+                  </button>
+                  <button id="right">
+                    <i class="fa-solid fa-rotate-right"></i>
+                  </button>
+                  <button id="horizontal">
+                    <i class="bx bx-reflect-vertical"></i>
+                  </button>
+                  <button id="vertical">
+                    <i class="bx bx-reflect-horizontal"></i>
+                  </button>
+                  <button id="effects">
+                    <i class="fa-solid fa-filter"></i>
+                  </button>
+                  <button id="cropImage">
+                    <i class="fa-solid fa-crop"></i>
+                  </button>
+                  <button id="text">
+                    <i class="fa-solid fa-t"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="preview-img">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081"
+                alt="preview-img"
+              />
+            </div>
+          </div>
+          <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <button class="share"><i class="fas fa-share"></i></button>
+            <button class="collage">
+              COLLAGE  
+              <i class="fas fa-th-large"></i>
+            </button>
+            
+            <div class="row">
+              <input type="file" class="file-input" accept="image/*" hidden />
+              <button class="choose-img">Choose Image</button>
+              <button class="save-img">Save Image</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="contact_us" id="contact-us" style="display: flex; justify-content: center; margin-bottom: 100px;">
+    <div class="contact_info" style="padding: 30px; color: #1a1516; border-radius: 2px; background-color: #f1f1f1; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-right: 30px;">
+          <!-- <p style="margin-top: 30px; transition: color 0.2s;">Mobile Number: 8109496867</p>
+          <p style="transition: color 0.2s;">Adress: D.Y Patil knowledge city Road</p>
+          <p style="transition: color 0.2s;">Landmark: Private road ADYPU</p> -->
+          <ul type="none" style="text-align: center; font-size:25px;">
+            <p class="dont">Don't hesitate to connect with us @</p>
+            <li><a href="https://www.linkedin.com/in/rishita-badole-446541211/">Linkedin </a></li>
+            <li><a href="https://www.instagram.com/">Instragram</a></li>
+            <li><a href="https://twitter.com/i/flow/login">Twitter</a></li>
+          </ul>
+    </div>
+    <!-- <div style="width: 900px;">
+          <h2>Contact Us</h2>
+          <p>Have a question or need assistance? Feel free to contact us.</p>
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+    </div> -->
+    <!-- Replace the previous contact us section with FAQs -->
+<div class="faq-section" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  
+  <!-- FAQ 1 -->
+  <div class="faq-item">
+    <h3 class="question">How can I upload an image for editing?</h3>
+    <p class="answer">You can upload an image by clicking the "Choose Image" button and selecting the desired image from your device.</p>
+  </div>
+  
+  <!-- FAQ 2 -->
+  <div class="faq-item">
+    <h3 class="question">Are there specific file formats supported for uploading images?</h3>
+    <p class="answer">Yes, supported formats include JPEG/JPG, PNG, WEBP, HEIC, SVG, and PSD (Photoshop) files.</p>
+  </div>
+  
+  <!-- FAQ 3 -->
+  <div class="faq-item">
+    <h3 class="question">Can I apply multiple filters and effects simultaneously?</h3>
+    <p class="answer">Yes, you can apply multiple filters and effects by toggling the desired options in the editor panel.</p>
+  </div>
+  
+  <!-- Add more FAQs as needed -->
+</div>
+
+  </div>
+</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
